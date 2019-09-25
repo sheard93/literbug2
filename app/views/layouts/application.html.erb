@@ -11,15 +11,26 @@
 
   <body>
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-       <a class="navbar-brand" href="#">Literbug</a>
+      <a class="navbar-brand" href="#">Literbug</a>
+     
+      <ul class="navbar-nav">
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to 'Sign Out', '#', class: 'nav-link' %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'Sign In', '#', class: 'nav-link' %>
+        </li>
+         <li class="nav-item">
+      <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
+    </li>
+      <% end %>
+    </ul>
+
     </nav>
 
-    <% if notice.present? %>
-      <p class="alert alert-info"><%= notice %></p>
-    <% end %>
-    <% if alert.present? %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
+
 
 
 
