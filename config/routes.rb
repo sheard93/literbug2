@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # Hook up routes so localhost:3030 takes us to landing page
+  root 'static_pages#index'
 end
