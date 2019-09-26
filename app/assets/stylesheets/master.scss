@@ -1,7 +1,7 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 /* use a variable for a color to easily change */
-$blue1: #9ce6e2;
+$blue1: #47928E;
 /* Use a mix in */
 @mixin background-size($size) {
   -webkit-background-size: $size;
@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .frosty {
   text-align: center;
+  color: $blue1;
 }
 
 .frosty h1 {
@@ -57,13 +58,14 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .links {
   font-family: 'Raleway', sans-serif;
-  color: #9ce6e2;
+  color: $blue1;
   text-decoration: none;
 
 }
 
-.nav-link {
+html>body .nav-link {
   font-family: 'Raleway', sans-serif;
-  color: #9ce6e2;
+  font-size: 18px;
+  color: $blue1;
   text-decoration: none;
 }
